@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(135deg, #2E1A47, #4B2E83);
+    color: #E0D7EC;
+}
+
+.sidebar {
+    height: 100%;
+    width: 220px;
+    background: linear-gradient(180deg, #8856f3,#7331de); /* Reverted sidebar color */
+    
+    padding: 25px; /* Increased padding */
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; /* Ensures space between items and pushes last items to the bottom */
+}
+
+.h2{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #E0D7EC; /* Changed heading color for better visibility */
+    font-size: 1.6rem; /* Increased font size */
+    font-weight: 700; /* Increased font weight for emphasis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px; /* Increased margin for better spacing */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Reset margin */
+    flex-grow: 1; /* Allows the list to grow and take available space */
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color:  #E0D7EC; /* Changed link color to black */
+    font-size: 1.2rem; /* Increased font size for better readability */
+    transition: color 0.3s ease;
+    padding: 10px 15px; /* Increased padding for links */
+    display: block; /* Make links block-level for better click area */
+}
+
+.sidebar ul li a:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    border-radius: 4px;
+}
+
+.sidebar ul li a.active {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    border-left: 3px solid #FFFFFF;
+    font-weight: bold;
+}
+
+.content {
+    font-family: Poppins;
+    flex: 1;
+    padding: 45px; /* Increased padding for more space */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: black;
+    justify-content: center;
+}
+
+.section {
+    display: none;
+}
+#home{
+    display: flex;
+    flex-wrap: nowrap   ;
+}
+
+.homediv, .bdiv{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+     border-radius: 10px;
+     padding: 20px;
+     margin: 5px;
+}
+.bul{
+    display: flex;
+    width: 100;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+}
+.bul ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.bul ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.bul ul li .bimg{
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+} 
+.bul ul li img{
+    width: 400px;
+} 
+.homediv#home1, #bdiv1{
+    width: 94%;
+}
+
+.homediv#home2, .homediv#home3{
+    width: 45%;
+}
+.homeasyraf{
+    display: flex;
+}
+.homediv#home1 h1, #bdiv1 h1{
+    margin-top: 0;
+    color: rgb(107 33 168 / var(--tw-text-opacity, 1));
+    margin: 0px 0px 7px;
+}
+.homediv#home1 p{
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+    margin-bottom: 20px;
+}
+.homediv#home1 button{
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    align-self: center;
+    padding:14px;
+    margin: 3px;
+    font-family: Poppins;
+    color: white;
+    background-color: rgb(147 51 234 / var(--tw-bg-opacity, 1));
+    padding: 0.75rem, 0.75rem, 1.5rem, 1.5rem;
+    border: 0;
+    border-radius: 5px;
+    transition: all;
+    font-weight: 600;
+}
+.homediv#home1 button:hover{
+    cursor: pointer;
+    align-self: center;
+    padding:14px;
+    margin: 3px;
+    color: white;
+    background-color: #7423c0;
+    transition: all;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+
+
+
+.game-box {
+    display: flex;
+    margin-top: 25px;
+    border: 1px solid #CE93D8;
+    padding: 20px; /* Increased padding */
+    height: 330px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    flex: 1;
+    padding: 20px; /* Increased padding */
+}
+
+.right-section {
+    flex: 1.5;
+    padding: 20px; /* Increased padding */
+    text-align: center;
+    margin-top: 20px; /* Increased margin */
+    border-left: 1px solid #CE93D8;
+    position: relative;
+}
+
+.right-section img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.play-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #6A4C93, #8C6BB1);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+.horizontal-scroll{
+    align-items: center;
+    overflow-y: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #7D2AE8 #1a1a1a;
+    display: flex;
+    flex-wrap: nowrap; 
+    height: 60px;
+}
+
+
+.horizontal-scroll button {
+    height: 40px;
+    margin-right: 15px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #6A4C93, #8C6BB1);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+    position: relative;
+}
+
+.horizontal-scroll button:hover {
+    background: linear-gradient(135deg, #8C6BB1, #A88FC2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.horizontal-scroll button:active {
+    background: linear-gradient(135deg, #5A3C83, #7C5BA1);
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.05s ease;
+}
+
+/* Standardized Back Button */
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #6a0dad;
+  color: white;
+  text-decoration: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  border: 2px solid #4b0082;
+  text-align: center;
+}
+
+.back-button:hover {
+  background: #5a0c9d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Game-specific adjustments for canvas-based games */
+#gameCanvas + .back-button-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

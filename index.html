@@ -1,0 +1,181 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ManyMiniGames.com</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="sidebar" style="height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+    <div class="h2" style="padding-bottom: 20px;">
+      <h2 style="color: white;">Many</h2>
+      <h2 style="color: #d8b4fe;">Mini</h2>
+      <h2 style="color: #7dd3fc;">Games</h2>
+    </div>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="margin-bottom: 15px;">
+        <a href="#" onclick="showSection('home')" id="home-link" style="display: flex; align-items: center; color: white; text-decoration: none; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: color 0.3s ease;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-right: 8px; width: 24px; height: 24px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg> Home
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <a href="#" onclick="showSection('biodata')" id="biodata-link" style="display: flex; align-items: center; color: white; text-decoration: none; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: color 0.3s ease;">
+          <span class="material-symbols-outlined" style="margin-right: 8px;">person</span> Biodata
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <a href="#" onclick="showSection('games')" id="games-link" style="display: flex; align-items: center; color: white; text-decoration: none; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: color 0.3s ease;">
+          <span class="material-symbols-outlined" style="margin-right: 8px;">sports_esports</span> Games
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+
+      <div id="home" class="section">
+      <div id="home1" class="homediv">
+        <h1>
+          Welcome to 
+          <span class="logo">
+              <span>Many</span><span>Mini</span><span>Games</span>
+          </span>
+        </h1>
+        <p>Your one-stop destination for fun and engaging JavaScript games. Browse our collection and start playing right away!</p>
+        <button onclick="showSection('games')" id="explore-games">Explore Games</button>
+      </div>
+      <div class="homeasyraf">
+      <div id="home2" class="homediv">
+        <h2>Latest Games</h2>
+        <p>Check out our newest additions to the game library.</p>
+      </div>
+      <div id="home3" class="homediv">
+        <h2>Most Popular</h2>
+        <p>See what games other players are enjoying.</p>
+      </div>
+    </div>
+
+    <div id="featured-games" class="homediv" style="margin-top: 20px;">
+      <h2>Featured Games</h2>
+      <div class="featured-games-container" style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <div class="game-card" style="flex: 1 1 200px; background: #f0f0f0; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <img src="screenshots/flappyBirdSs.png" alt="Flappy Bird" style="width: 100%; border-radius: 8px;">
+          <h3>Flappy Bird</h3>
+          <p>Navigate the bird through the pipes!</p>
+          <button onclick="loadGame('FLAPPY')">Play Now</button>
+        </div>
+        <div class="game-card" style="flex: 1 1 200px; background: #f0f0f0; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <img src="screenshots/memorySs.png" alt="Memory Game" style="width: 100%; border-radius: 8px;">
+          <h3>Memory Game</h3>
+          <p>Match the pairs of cards!</p>
+          <button onclick="loadGame('MEMORY')">Play Now</button>
+        </div>
+        <div class="game-card" style="flex: 1 1 200px; background: #f0f0f0; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <img src="screenshots/rpsSs.png" alt="Rock Paper Scissors" style="width: 100%; border-radius: 8px;">
+          <h3>Rock Paper Scissors</h3>
+          <p>Play against the computer!</p>
+          <button onclick="loadGame('RPS')">Play Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="news-updates" class="homediv" style="margin-top: 20px;">
+      <h2>News & Updates</h2>
+      <ul>
+        <li>New game "Asteroid Shooter" added! Try it out now.</li>
+        <li>Website maintenance scheduled for next Saturday.</li>
+        <li>Join our community forum to share your scores and tips.</li>
+      </ul>
+    </div>
+
+    <div id="testimonials" class="homediv" style="margin-top: 20px;">
+      <h2>User Testimonials</h2>
+      <blockquote>"I love these mini games! Great variety and fun for all ages." - Alex</blockquote>
+      <blockquote>"The best place to play quick games during breaks." - Jamie</blockquote>
+      <blockquote>"Highly recommend for anyone who enjoys casual gaming." - Taylor</blockquote>
+    </div>
+
+    <div id="social-newsletter" class="homediv" style="margin-top: 20px;">
+      <h2>Stay Connected</h2>
+      <p>Follow us on social media or subscribe to our newsletter for the latest updates.</p>
+      <div style="display: flex; gap: 15px; align-items: center;">
+        <a href="#" style="text-decoration: none; color: #6A4C93; font-weight: bold;">Facebook</a>
+        <a href="#" style="text-decoration: none; color: #6A4C93; font-weight: bold;">Twitter</a>
+        <a href="#" style="text-decoration: none; color: #6A4C93; font-weight: bold;">Instagram</a>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Subscribed!');" style="margin-top: 10px;">
+        <input type="email" placeholder="Your email" required style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+        <button type="submit" style="padding: 8px 12px; background-color: #6A4C93; color: white; border: none; border-radius: 5px; cursor: pointer;">Subscribe</button>
+      </form>
+    </div>
+
+    
+
+    
+  </div>
+
+  <div id="biodata" class="section">
+    <div class="bdiv" id="bdiv1">
+      <h1>Biodata of JavaScript Creators</h1>
+      <p>Here are some details about the creators of these JavaScript games:</p>
+    </div>
+    <div class="bul" id="bdiv2">
+      <ul>
+        <li>
+          <strong>Dhikshen A/L Selvakumar</strong> 
+          <div class="bimg">
+            <img src="image-removebg-preview.png" alt="">
+          </div>
+          <p>Lead developer and game designer.</p>
+        </li>
+        <li>
+          <strong>Ali Aiman bin Dzulfarqeish</strong> 
+          <div class="bimg">
+          <img src="FORMAL_PICTURE_ALI_2025_BARU-removebg-preview.png" alt="Ali Picture">
+          </div>
+          <p>Frontend engineer and UI/UX specialist.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="games" class="section">
+      <h1>Games</h1>
+      <p>Explore a collection of fun and interactive mini-games created using JavaScript!</p>
+      <div class="horizontal-scroll" >
+        <button onclick="loadGame('FLAPPY')" style="margin-right: 10px; height: 40px;">Flappy Bird</button>
+        <button onclick="loadGame('MEMORY')" style="margin-right: 10px; height: 40px;">Memory Game</button>
+        <button onclick="loadGame('RPS')" style="margin-right: 10px; height: 40px;">Rock Paper Scissors</button>
+        <button onclick="loadGame('SNAKE')" style="margin-right: 10px; height: 40px;">Snake Game</button>
+        <button onclick="loadGame('TICTACTOE')" style="margin-right: 10px; height: 40px;">Tic Tac Toe</button>
+        <button onclick="loadGame('ASTEROID')" style="margin-right: 10px; height: 40px;">Asteroid Shooter</button>
+        <button onclick="loadGame('SIMON')" style="margin-right: 10px; height: 40px;">Simon Game</button>
+        <button onclick="loadGame('BREAKER')" style="margin-right: 10px; height: 40px;">Brick Breaker</button>
+        <button onclick="loadGame('BUBBLES')" style="margin-right: 10px; height: 40px;">Bubbles</button>
+      </div>
+      <div class="game-box">
+        <div class="left-section">
+          <h2 id="game-title">Game Title</h2>
+          <p id="game-description">Game description goes here.</p>
+        </div>
+        <div class="right-section">
+          <img id="game-screenshot" src="screenshots/flappyBirdSs.png" alt="Game Screenshot" />
+          <a id="play-button" href="JsGames/JsGames/FLAPPY.html" class="play-button">Play</a>
+        </div>
+      </div>
+
+      
+
+  </div>
+
+  
+    
+  <script src="script.js"></script>
+</body>
+</html>
